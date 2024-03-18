@@ -1,8 +1,7 @@
-// Your first C++ Program
-
 #include <iostream>
 
 int main(){
-    std::cout << "Hola Mundo, estudiantes de IE0217!";
+    std::cout << "Hola a todas y todos, estudiantes de IE0217!\n";
+    std::cout << "Probando el stash!";
     return 0;
 }
