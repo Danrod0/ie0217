@@ -1,8 +1,7 @@
-// Your first C++ Program
+#include <iostream> // Biblioteca que contiene el cout
 
-#include <iostream>
-
-int main(){
-    std::cout << "Hola Mundo, estudiantes de IE0217!";
-    return 0;
+int main(){ // Funcion main del programa
+    std::cout << "Hola a todos y todas, estudiantes de IE0217!\n"; // Imprime en la consola con un salto de linea
+    std::cout << "Probando el stash!"; // Imprime en consola
+    return 0; // Devuelve 0
 }
