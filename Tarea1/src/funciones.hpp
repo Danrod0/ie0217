@@ -9,4 +9,7 @@ using namespace std;
 
 void agregarPalabra(string diccionario[], int &cantidadDiccionario);
 
+void mostrarDiccionario(const string diccionario[], const int cantidadDiccionario);
+
+
 #endif // FUNCIONES_HPP

@@ -13,3 +13,10 @@ void agregarPalabra(string diccionario[], int &cantidadDiccionario) {
 
     diccionario[cantidadDiccionario++] = palabra;
 }
+
+void mostrarDiccionario(const string diccionario[], const int cantidadDiccionario) {
+    cout << "\nDiccionario de palabras:" << endl;
+    for (int i = 0; i < cantidadDiccionario; ++i) {
+        cout << diccionario[i] << endl;
+    }
+}

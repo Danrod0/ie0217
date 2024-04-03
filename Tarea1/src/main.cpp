@@ -52,7 +52,7 @@ int main() {
                 agregarPalabra(diccionario, cantidadDiccionario);
                 break;
             case 4:
-                cout << "Probando opcion 4" << endl;
+                mostrarDiccionario(diccionario, cantidadDiccionario);
                 break;
             case 5:
                 cout << "\nMuchas gracias por jugar"<< endl;
