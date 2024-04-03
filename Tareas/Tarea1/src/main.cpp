@@ -1,9 +1,45 @@
+/**
+ * @file main.cpp
+ * @brief Este archivo tiene la funcion main del programa con el menu inicial
+ *
+ * @author Daniel Rodriguez Rivas B96719
+ * @date 3/4/24
+ * 
+ * Licencia: MIT
+ */
+
 #include <iostream>
 #include <string>
 #include "funciones.hpp"
 #include "juego.hpp"
 
 using namespace std;
+
+/**
+ * @brief Es la funcion main del programa.
+ * 
+ * Se realiza una estructura do-while para el menu de inicio
+ * donde se utiliza un switch case para las opciones del menu
+ * en el caso 1 se utiliza otro switch case para definir la
+ * dificultad que el usuario desea utilizar.
+ * En el caso de la opcion 2 se maneja la ejecución principal 
+ * del juego del Ahorcado. Comienza iniciando una partida y 
+ * mostrando la palabra oculta. Luego, solicita al usuario 
+ * que ingrese letras para adivinar la palabra, actualizando 
+ * el estado de la palabra y mostrando los intentos restantes. 
+ * Después de cada intento, informa si la letra ingresada fue 
+ * correcta o incorrecta. Finalmente, muestra un mensaje de 
+ * felicitaciones si el jugador adivina la palabra o "Game over" 
+ * si se quedan sin intentos.
+ * En el caso de la opcion 3, se llama a la funcion para agregar
+ * una palabra al diccionario.
+ * En el caso de la opcion 4 se llama a la funcion para observar
+ * el diccionario en consola.
+ * Por utlimo el caso 5 termina el programa.
+ * 
+ * 
+ * @return Retorna 0
+ */
 
 int main() {
 

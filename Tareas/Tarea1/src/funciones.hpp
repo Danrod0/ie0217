@@ -1,3 +1,13 @@
+/**
+ * @file funciones.hpp
+ * @brief Este archivo tiene las declaraciones de las funciones
+ *
+ * @author Daniel Rodriguez Rivas B96719
+ * @date 3/4/24
+ * 
+ * Licencia: MIT
+ */
+
 #ifndef FUNCIONES_HPP
 #define FUNCIONES_HPP
 
