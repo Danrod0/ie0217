@@ -1,11 +1,15 @@
 #include <iostream>
-
+#include <string>
+#include "funciones.hpp"
 
 using namespace std;
 
 int main() {
     int opcion;
-    int intentos;
+    int intentos = 7;
+    int dificultad = 1;
+    string diccionario[1000] = {"curso", "ingenieria", "electrica", "juego", "ansiedad"};
+    int cantidadDiccionario = 5;
 
     do {
         cout << "\nBienvenido al juego del Ahorcado\n" << endl;
@@ -24,17 +28,17 @@ int main() {
                 cout << "2. Intermedio (5 intentos)" << endl;
                 cout << "3. Dificil (3 intentos)\n" << endl;
                 cout << "Ingrese la opcion de dificultad: ";
-                cin >> intentos;
+                cin >> dificultad;
 
-                switch(intentos) {
+                switch(dificultad) {
                     case 1:
-                        cout << "Probando opcion 1 de la dificultad" << endl;
+                        intentos = 7;
                         break;
                     case 2:
-                        cout << "Probando opcion 2 de la dificultad" << endl;
+                        intentos = 5;
                         break;
                     case 3:
-                        cout << "Probando opcion 3 de la dificultad" << endl;
+                        intentos = 3;
                         break;
                     default:
                         cout << "\nOpcion de dificultad no valida." << endl;
@@ -45,7 +49,7 @@ int main() {
                 cout << "Probando opcion 2" << endl;
                 break;
             case 3:
-                cout << "Probando opcion 3" << endl;
+                agregarPalabra(diccionario, cantidadDiccionario);
                 break;
             case 4:
                 cout << "Probando opcion 4" << endl;
