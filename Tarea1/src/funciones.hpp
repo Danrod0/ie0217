@@ -6,6 +6,10 @@
 #include <string>
 #include "juego.hpp"
 
+/*
+Aca se declaran todas las funciones a utilizar en el programa
+*/
+
 using namespace std;
 
 void agregarPalabra(string diccionario[], int &cantidadDiccionario);
