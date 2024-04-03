@@ -14,5 +14,6 @@ void mostrarDiccionario(const string diccionario[], const int cantidadDiccionari
 
 void iniciarJuego(Ahorcado &juego, string* diccionario, const int cantidadDiccionario, int intentos);
 
+bool adivinarLetra(Ahorcado &juego, char letra);
 
 #endif // FUNCIONES_HPP

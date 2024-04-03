@@ -11,6 +11,7 @@ int main() {
     int dificultad = 1;
     string diccionario[1000] = {"curso", "ingenieria", "electrica", "juego", "ansiedad"};
     int cantidadDiccionario = 5;
+    bool acierto; 
     Ahorcado juego;
 
     do {
@@ -49,7 +50,15 @@ int main() {
                 break;
             case 2:
                 iniciarJuego(juego, diccionario, cantidadDiccionario, intentos);
-                cout << "Probando que todo funcione correctamente" << endl;
+                char letra;
+                cout << "Ingrese una letra para adivinar: ";
+                cin >> letra;
+                acierto = adivinarLetra(juego, letra);
+                if (acierto) {
+                    cout << "Letra correcta" << endl;
+                } else {
+                    cout << "Letra incorrecta" << endl;
+                }
                 break;
             case 3:
                 agregarPalabra(diccionario, cantidadDiccionario);

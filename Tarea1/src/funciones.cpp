@@ -36,10 +36,20 @@ void iniciarJuego(Ahorcado &juego, string* diccionario, const int cantidadDiccio
     for (size_t i = 0; i < juego.palabraAdivinar.length(); ++i) {
         juego.estadoPalabra += "_";
     }
-
     
     juego.intentosMaximos = intentos; 
-
-    
+   
     juego.intentosRealizados = 0;
+}
+
+bool adivinarLetra(Ahorcado &juego, char letra) {
+    bool acierto = false;
+    for (size_t i = 0; i < juego.palabraAdivinar.length(); ++i) {
+        if (*(juego.palabraAdivinar.begin() + i) == letra) {
+            *(juego.estadoPalabra.begin() + i) = letra;
+            acierto = true;
+        }
+    }
+    juego.intentosRealizados++;
+    return acierto;
 }
