@@ -16,4 +16,6 @@ void iniciarJuego(Ahorcado &juego, string* diccionario, const int cantidadDiccio
 
 bool adivinarLetra(Ahorcado &juego, char letra);
 
+bool juegoTerminado(Ahorcado &juego);
+
 #endif // FUNCIONES_HPP

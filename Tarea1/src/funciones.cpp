@@ -50,6 +50,25 @@ bool adivinarLetra(Ahorcado &juego, char letra) {
             acierto = true;
         }
     }
-    juego.intentosRealizados++;
+    if (!acierto) {
+        juego.intentosRealizados++;
+    }
     return acierto;
+}
+
+bool juegoTerminado(Ahorcado &juego) {
+    if (juego.intentosRealizados >= juego.intentosMaximos) {
+        cout << "Se han agotado todos los intentos" << endl;
+        cout << "Ingrese la palabra completa para intentar adivinarla: ";
+        string palabraCompleta;
+        cin >> palabraCompleta;
+        if (palabraCompleta == juego.palabraAdivinar) {
+            cout << "Palabra correcta, Has adivinado la palabra." << endl;
+            return true;
+        } else {
+            cout << "Game over, La palabra era: " << juego.palabraAdivinar << endl;
+            return true;
+        }
+    }
+    return (juego.estadoPalabra == juego.palabraAdivinar);
 }

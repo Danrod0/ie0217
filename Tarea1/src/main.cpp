@@ -12,6 +12,8 @@ int main() {
     string diccionario[1000] = {"curso", "ingenieria", "electrica", "juego", "ansiedad"};
     int cantidadDiccionario = 5;
     bool acierto; 
+    string palabraIntento;
+    char letra;
     Ahorcado juego;
 
     do {
@@ -50,14 +52,24 @@ int main() {
                 break;
             case 2:
                 iniciarJuego(juego, diccionario, cantidadDiccionario, intentos);
-                char letra;
-                cout << "Ingrese una letra para adivinar: ";
-                cin >> letra;
-                acierto = adivinarLetra(juego, letra);
-                if (acierto) {
-                    cout << "Letra correcta" << endl;
+                cout << "Palabra actual: " << juego.estadoPalabra << endl;
+                while (!juegoTerminado(juego)) {
+                    cout << "Intentos restantes: " << juego.intentosMaximos - juego.intentosRealizados << endl;
+                    cout << "Ingrese una letra para adivinar: ";
+                    char letra;
+                    cin >> letra;
+                    bool acierto = adivinarLetra(juego, letra);
+                    cout << "Palabra actual: " << juego.estadoPalabra << endl;
+                    if (acierto) {
+                        cout << "Letra correcta" << endl;
+                    } else {
+                        cout << "Letra incorrecta" << endl;
+                    }
+                }
+                if (juego.estadoPalabra == juego.palabraAdivinar) {
+                    cout << "Felicidades, Has adivinado la palabra." << endl;
                 } else {
-                    cout << "Letra incorrecta" << endl;
+                    cout << "Game over, Has agotado todos los intentos. La palabra era: " << juego.palabraAdivinar << endl;
                 }
                 break;
             case 3:
