@@ -48,7 +48,8 @@ int main() {
                 }
                 break;
             case 2:
-                cout << "Probando opcion 2" << endl;
+                iniciarJuego(juego, diccionario, cantidadDiccionario, intentos);
+                cout << "Probando que todo funcione correctamente" << endl;
                 break;
             case 3:
                 agregarPalabra(diccionario, cantidadDiccionario);

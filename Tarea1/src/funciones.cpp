@@ -1,6 +1,8 @@
 #include <iostream>
 #include "funciones.hpp"
 #include <string>
+#include "juego.hpp"
+#include <ctime>
 
 using namespace std;
 
@@ -19,4 +21,25 @@ void mostrarDiccionario(const string diccionario[], const int cantidadDiccionari
     for (int i = 0; i < cantidadDiccionario; ++i) {
         cout << diccionario[i] << endl;
     }
+}
+
+void iniciarJuego(Ahorcado &juego, string* diccionario, const int cantidadDiccionario, int intentos) {
+    
+    srand(time(nullptr));
+
+    
+    int indicePalabra = rand() % cantidadDiccionario;
+    juego.palabraAdivinar = diccionario[indicePalabra];
+
+    
+    juego.estadoPalabra = "";
+    for (size_t i = 0; i < juego.palabraAdivinar.length(); ++i) {
+        juego.estadoPalabra += "_";
+    }
+
+    
+    juego.intentosMaximos = intentos; 
+
+    
+    juego.intentosRealizados = 0;
 }
