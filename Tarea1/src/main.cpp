@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "funciones.hpp"
+#include "juego.hpp"
 
 using namespace std;
 
@@ -10,6 +11,7 @@ int main() {
     int dificultad = 1;
     string diccionario[1000] = {"curso", "ingenieria", "electrica", "juego", "ansiedad"};
     int cantidadDiccionario = 5;
+    Ahorcado juego;
 
     do {
         cout << "\nBienvenido al juego del Ahorcado\n" << endl;
