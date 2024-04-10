@@ -79,7 +79,7 @@ int main() {
 
     int opcion;
     bool salir = false;
-    bool encontrado1 = false, encontrado2 = false; // Movidos fuera del bloque switch
+    bool encontrado1 = false, encontrado2 = false; 
 
     do {
         cout << "\nMenu:" << endl;
@@ -137,7 +137,7 @@ int main() {
                 if (!encontrado1 || !encontrado2) {
                     cout << "Uno o ambos paises no fueron encontrados." << endl;
                 }
-                break; // Agregar esta línea
+                break;
 
             case 3:
                 // Agregar un nuevo país
