@@ -49,7 +49,7 @@ void imprimirOpcionesContinentes() {
  * 
  * Comienza con la creación de un objeto Planeta, 
  * al que se le agregan cinco continentes. Luego, 
- * entra en un bucle while que muestra un menú de 
+ * entra en un bucle do-while que muestra un menú de 
  * opciones al usuario, permitiéndole realizar diversas 
  * acciones relacionadas con la información de los países 
  * en el planeta. Estas opciones incluyen imprimir 
@@ -79,9 +79,9 @@ int main() {
 
     int opcion;
     bool salir = false;
-    bool encontrado1 = false, encontrado2 = false; // Variables declaradas aquí
+    bool encontrado1 = false, encontrado2 = false; // Movidos fuera del bloque switch
 
-    while (!salir) {
+    do {
         cout << "\nMenu:" << endl;
         cout << "1. Imprimir informacion de todos los paises." << endl;
         cout << "2. Comparar paises." << endl;
@@ -105,7 +105,8 @@ int main() {
                 cin >> id2;
 
                 // Variables para verificar si se encontraron los paises
-                bool encontrado1 = false, encontrado2 = false;
+                encontrado1 = false;
+                encontrado2 = false;
 
                 // Buscar el primer pais
                 for (int i = 0; i < planeta.getNumContinentes(); ++i) {
@@ -136,7 +137,8 @@ int main() {
                 if (!encontrado1 || !encontrado2) {
                     cout << "Uno o ambos paises no fueron encontrados." << endl;
                 }
-                break;
+                break; // Agregar esta línea
+
             case 3:
                 // Agregar un nuevo país
                 int id, habitantes;
@@ -180,6 +182,8 @@ int main() {
                     // Opción de continente no válida
                     cout << "Opcion de continente no valida." << endl;
                 }
+
+                // Volver al menú principal
                 break;
             case 4:
                 // Eliminar un país existente
@@ -198,7 +202,7 @@ int main() {
                 cout << "Opcion invalida. Por favor, ingrese una opcion valida." << endl;
                 break;
         }
-    }
+    } while (opcion != 5);
 
     return 0;
 }
