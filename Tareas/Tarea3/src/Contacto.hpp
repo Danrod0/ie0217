@@ -3,6 +3,14 @@
 
 #include <string>
 
+/**
+ * @brief Estructura para los contactos
+ * 
+ * Se crea la estructura para almacenar
+ * los contactos, junto con las declaraciones
+ * de las funciones.
+ */
+
 // Estructura de datos para almacenar un contacto
 struct Contacto {
     std::string nombre;

@@ -8,6 +8,13 @@
 
 const int TABLE_SIZE = 50;
 
+
+/**
+ * @brief Crea la clase Hashtable
+ * 
+ * Se crea la clase tipo HashTable
+ * junto con la firma de sus funciones
+ */
 class HashTable {
 private:
     std::vector<std::list<Contacto*>> tabla;

@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// Enumeracion para representar las opciones del menu
 enum opciones {
     AGREGAR_CONTACTO = 1,
     ELIMINAR_CONTACTO,
@@ -14,13 +15,21 @@ enum opciones {
     OPCIONES_MAX
 };
 
+/**
+ * @brief Funcion main
+ * 
+ * Se crea la funcion main, la cual
+ * cuenta con un bucle Do-While
+ * para mantener el menu.
+ */
 int main() {
-    HashTable tabla;
+    HashTable tabla; // Se crea una instancia de HashTable para almacenar los contactos
 
     int opcion;
     string nombre;
     string telefono;
 
+    // Bucle do-While para el menu principal
     do {
         cout << "\nBienvenido a la aplicacion de Contactos\n" << endl;
         cout << "1. Agregar un contacto" << endl;
@@ -35,25 +44,25 @@ int main() {
 
             case AGREGAR_CONTACTO:
 
-                cin.ignore();
+                cin.ignore(); // Limpia el buffer del teclado
                 cout << "Ingrese el nombre del contacto: ";
-                getline(cin, nombre);
+                getline(cin, nombre); // Lee el nombre del contacto
                 cout << "Ingrese el numero de telefono del contacto: ";
                 cin >> telefono;
-                tabla.agregarContacto(nombre, telefono);
+                tabla.agregarContacto(nombre, telefono); // Agrega el contacto a la tabla
                 break;
 
             case ELIMINAR_CONTACTO:
 
-                cin.ignore();
+                cin.ignore(); // Limpia el buffer del teclado
                 cout << "Ingrese el nombre del contacto a eliminar: ";
                 getline(std::cin, nombre);
-                tabla.eliminarContacto(nombre);
+                tabla.eliminarContacto(nombre); // Elimina el contacto de la tabla
                 break;
 
             case IMPRIMIR:
 
-                tabla.imprimir();
+                tabla.imprimir(); // Imprime la estructura de la tabla hash
                 break;
 
             case MOSTRAR_CONTACTOS: {
