@@ -19,6 +19,7 @@ public:
     HashTable();
     ~HashTable(); // Destructor para liberar la memoria cloud
     void agregarContacto(const std::string& nombre, const std::string& telefono);
+    void eliminarContacto(const std::string& nombre);
 };
 
 #endif // HASHTABLE_HPP
