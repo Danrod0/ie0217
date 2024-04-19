@@ -53,7 +53,7 @@ int main() {
 
             case IMPRIMIR:
 
-                cout << "Opcion para imprimir" << endl;
+                tabla.imprimir();
                 break;
 
             case MOSTRAR_CONTACTOS:
