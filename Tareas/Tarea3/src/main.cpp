@@ -1,6 +1,11 @@
 #include <iostream>
+#include <string>
+#include "Contacto.hpp"
+#include "HashTable.hpp"
 
-enum opciones{
+using namespace std;
+
+enum opciones {
     AGREGAR_CONTACTO = 1,
     ELIMINAR_CONTACTO,
     IMPRIMIR,
@@ -9,11 +14,13 @@ enum opciones{
     OPCIONES_MAX
 };
 
-
 int main() {
+    HashTable tabla;
 
     int opcion;
-    
+    string nombre;
+    string telefono;
+
     do {
         cout << "\nBienvenido a la aplicacion de Contactos\n" << endl;
         cout << "1. Agregar un contacto" << endl;
@@ -25,22 +32,37 @@ int main() {
         cin >> opcion;
 
         switch(opcion) {
+
             case AGREGAR_CONTACTO:
-                cout << "Opcion para agregar contacto" << endl;
+
+                cin.ignore();
+                cout << "Ingrese el nombre del contacto: ";
+                getline(cin, nombre);
+                cout << "Ingrese el numero de telefono del contacto: ";
+                cin >> telefono;
+                tabla.agregarContacto(nombre, telefono);
                 break;
+
             case ELIMINAR_CONTACTO:
+
                 cout << "Opcion para eliminar contacto" << endl;
                 break;
+
             case IMPRIMIR:
+
                 cout << "Opcion para imprimir" << endl;
                 break;
+
             case MOSTRAR_CONTACTOS:
                 cout << "Opcion para mostrar contactos" << endl;
-                break;
+
             case SALIR:
+
                 cout << "Saliendo del programa...\n" << endl;
                 break;
+
             default:
+
                 cout << "\nOpcion no valida, por favor intente de nuevo." << endl;
         }
     } while(opcion != SALIR);
