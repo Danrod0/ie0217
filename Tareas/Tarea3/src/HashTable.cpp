@@ -63,3 +63,14 @@ void HashTable::eliminarContacto(const std::string& nombre) {
     
     std::cout << "El contacto no se encontro en la lista." << std::endl;
 }
+
+void HashTable::imprimir() const {
+    std::cout << "Imprimiendo Hash-Table y Listas Enlazadas:" << std::endl;
+    for (size_t i = 0; i < tabla.size(); ++i) {
+        std::cout << "Indice " << i << ": ";
+        for (const auto& contactoPtr : tabla[i]) {
+            std::cout << contactoPtr->nombre << " - " << contactoPtr->telefono << " | ";
+        }
+        std::cout << std::endl;
+    }
+}
