@@ -45,7 +45,10 @@ int main() {
 
             case ELIMINAR_CONTACTO:
 
-                cout << "Opcion para eliminar contacto" << endl;
+                std::cin.ignore();
+                std::cout << "Ingrese el nombre del contacto a eliminar: ";
+                std::getline(std::cin, nombre);
+                tabla.eliminarContacto(nombre);
                 break;
 
             case IMPRIMIR:
