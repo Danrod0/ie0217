@@ -74,3 +74,13 @@ void HashTable::imprimir() const {
         std::cout << std::endl;
     }
 }
+
+std::vector<Contacto*> HashTable::obtenerContactosCelular() const {
+    std::vector<Contacto*> contactos;
+    for (const auto& lista : tabla) {
+        for (const auto& contactoPtr : lista) {
+            contactos.push_back(contactoPtr);
+        }
+    }
+    return contactos;
+}

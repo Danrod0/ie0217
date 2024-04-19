@@ -21,6 +21,7 @@ public:
     void agregarContacto(const std::string& nombre, const std::string& telefono);
     void eliminarContacto(const std::string& nombre);
     void imprimir() const;
+    std::vector<Contacto*> obtenerContactosCelular() const;
 };
 
 #endif // HASHTABLE_HPP
