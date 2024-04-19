@@ -45,9 +45,9 @@ int main() {
 
             case ELIMINAR_CONTACTO:
 
-                std::cin.ignore();
-                std::cout << "Ingrese el nombre del contacto a eliminar: ";
-                std::getline(std::cin, nombre);
+                cin.ignore();
+                cout << "Ingrese el nombre del contacto a eliminar: ";
+                getline(std::cin, nombre);
                 tabla.eliminarContacto(nombre);
                 break;
 
@@ -56,8 +56,29 @@ int main() {
                 tabla.imprimir();
                 break;
 
-            case MOSTRAR_CONTACTOS:
-                cout << "Opcion para mostrar contactos" << endl;
+            case MOSTRAR_CONTACTOS: {
+
+                    // Se obtienen los contactos almacenados en la memoria del celular
+                    std::vector<Contacto*> contactosCelular = tabla.obtenerContactosCelular();
+
+                    // Se utiliza el algoritmo de ordenamiento de burbuja para ordenar los contactos
+                    // en orden alfabetico.
+                    for (size_t i = 0; i < contactosCelular.size() - 1; ++i) {
+                        for (size_t j = 0; j < contactosCelular.size() - i - 1; ++j) {
+                            if (contactosCelular[j]->getNombre() > contactosCelular[j + 1]->getNombre()) {
+                                // Aca intercambia los elementos si están en el orden incorrecto
+                                std::swap(contactosCelular[j], contactosCelular[j + 1]);
+                            }
+                        }
+                    }
+
+                    // Aca se imprimen los contactos ya ordenados
+                    cout << "Contactos almacenados en la memoria del celular:" << std::endl;
+                    for (const auto& contactoPtr : contactosCelular) {
+                        cout << "Nombre: " << contactoPtr->getNombre() << ", Telefono: " << contactoPtr->getTelefono() << std::endl;
+                    }
+                }
+                break;
 
             case SALIR:
 
