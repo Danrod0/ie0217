@@ -119,6 +119,52 @@ public:
             }
         }
     }
+    
+    void llenarMatrizRandom() {
+
+        std::random_device random;
+        std::mt19937 generador(random());
+
+        if (tipo == "int" || tipo == "float") {
+            
+            std::uniform_int_distribution<int> distribucionEntera(0, 100); 
+            std::uniform_real_distribution<float> distribucionFlotante(0.0, 100.0); 
+
+            for (int i = 0; i < filasMatriz; ++i) {
+                for (int j = 0; j < columnasMatriz; ++j) {
+                    
+                    
+                    T valorAleatorio;
+
+                    if constexpr (std::is_same_v<T, int>) {
+                        valorAleatorio = distribucionEntera(generador);
+                    } 
+                    
+                    else if constexpr (std::is_same_v<T, float>) {
+                        valorAleatorio = distribucionFlotante(generador);
+                    }
+
+                    matrizResultado[i][j] = valorAleatorio;
+                }
+            }
+        } 
+
+        else if constexpr (std::is_same_v<T, std::complex<float>>) {
+
+            std::uniform_real_distribution<float> distribucionReal(0.0, 100.0); 
+            std::uniform_real_distribution<float> distribucionImaginaria(0.0, 100.0); 
+
+            for (int i = 0; i < filasMatriz; ++i) {
+                for (int j = 0; j < columnasMatriz; ++j) {
+
+                    float real = distribucionReal(generador);
+                    float imaginaria = distribucionImaginaria(generador);
+
+                    matrizResultado[i][j] = std::complex<float>(real, imaginaria);
+                }
+            }
+        }
+    }
 };
 
 #endif // CLASES_HPP

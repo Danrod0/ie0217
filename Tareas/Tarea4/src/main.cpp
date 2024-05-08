@@ -172,6 +172,22 @@ int main(){
         
         case DATOS_ALEATORIOS:
 
+            cout << "Se llenaran las matrices con datos aleatorios \n" << endl;
+            if (datoVerificado == "int"){
+                    matrizInt1.llenarMatrizRandom();    
+                    matrizInt2.llenarMatrizRandom();
+                }    
+
+                else if  (datoVerificado == "float"){
+                    matrizFloat1.llenarMatrizRandom();    
+                    matrizComplex2.llenarMatrizRandom();
+                }    
+
+                else if  (datoVerificado ==  "std::complex"){
+                   matrizComplex1.llenarMatrizRandom();
+                   matrizComplex2.llenarMatrizRandom();    
+                }  
+
             break;
 
         case IMPRIMIR_MATRICES:
