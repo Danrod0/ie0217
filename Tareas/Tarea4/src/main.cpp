@@ -192,6 +192,32 @@ int main(){
 
         case IMPRIMIR_MATRICES:
 
+            cout << "Se imprimiran las matrices guardadas en el sistema " << endl;
+
+            if (datoVerificado == "int"){ 
+                cout << "Matriz 1 " << endl;
+                matrizInt1.imprimirMatriz();
+                cout << endl;
+                cout << "\nMatriz 2 " << endl;
+                matrizInt2.imprimirMatriz();
+            } 
+            
+            else if (datoVerificado == "float"){ 
+                cout << "Matriz 1 " << endl;
+                matrizFloat1.imprimirMatriz();
+                cout << endl;
+                cout << "\nMatriz 2 " << endl;
+                matrizFloat2.imprimirMatriz();
+            } 
+            
+            else if (datoVerificado == "std::complex"){ 
+                cout << "Matriz 1 " << endl;
+                matrizComplex1.imprimirMatriz();
+                cout << endl;
+                cout << "\nMatriz 2 " << endl;
+                matrizComplex2.imprimirMatriz();
+            } 
+
             break;
 
         case REALIZAR_OPERACION:
