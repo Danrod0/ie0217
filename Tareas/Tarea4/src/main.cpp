@@ -43,10 +43,10 @@ int main(){
 
         cout << "Bienvenido a la calculadora de matrices!!" << endl << endl;
         cout << "Por favor seleccione una opcion de nuestro menu" << endl;
-        cout << "1. Generar matrices manualmente." << endl;
-        cout << "2. Seleccionar el tipo de datos de la matriz." << endl;
+        cout << "1. Generar matrices manualmente (seleccionar dimensiones e ingresar valores)" << endl;
+        cout << "2. Seleccionar el tipo de datos de la matriz (Default: enteros)." << endl;
         cout << "3. Seleccionar la operacion a realizar." << endl;
-        cout << "4. Llenar las matrices con datos aleatorios." << endl;
+        cout << "4. Llenar las matrices con datos aleatorios (debe usar primero la opcion 1, seguidamente este para su correcto funcionamiento)." << endl;
         cout << "5. Imprimir las matrices ingresadas." << endl;
         cout << "6. Realizar la operacion seleccionada." << endl;
         cout << "7. Salir." << endl << endl;

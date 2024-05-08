@@ -119,7 +119,7 @@ public:
             }
         }
     }
-    
+
     void llenarMatrizRandom() {
 
         std::random_device random;
@@ -163,6 +163,19 @@ public:
                     matrizResultado[i][j] = std::complex<float>(real, imaginaria);
                 }
             }
+        }
+    }
+
+    void imprimirMatriz() const {
+        for (const auto& fila : matrizResultado) {
+            for (const auto& elemento : fila) {
+                if constexpr (std::is_same_v<T, std::complex<float>>) {
+                    std::cout << "(" << elemento.real() << " + " << elemento.imag() << "i) ";
+                } else {
+                    std::cout << elemento << " ";
+                }
+            }
+            std::cout << std::endl;
         }
     }
 };
