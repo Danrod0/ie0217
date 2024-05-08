@@ -14,10 +14,24 @@ enum opciones  {
 
 }; 
 
+Matriz<int> matrizInt1;
+Matriz<float> matrizFloat1;
+Matriz<std::complex<float>> matrizComplex1;
+Matriz<int> matrizInt2;
+Matriz<float> matrizFloat2;
+Matriz<std::complex<float>> matrizComplex2;
 
 int main(){ 
 
+    ValidarEntrada verificador;
+
     int opcion;
+    std::string tipoDato;
+    std::string datoVerificado = "int";
+    int filas1;
+    int columnas1;
+    int filas2;
+    int columnas2;
 
     do{ 
 
@@ -37,7 +51,88 @@ int main(){
 
         case GENERAR_MATRIZ:
 
+                cout << "\n Por favor ingrese la cantidad de filas de la matriz 1: ";
+            cin >> filas1;
+
+            try{ 
+                verificador.validarTamanio(filas1);       
+            }
+            catch (const char* msg){
+            cout << msg << endl;
             break;
+            }
+
+            cout << "\n Por favor ingrese la cantidad de columnas de la matriz 1: ";
+            cin >> columnas1;
+
+            try{ 
+                    verificador.validarTamanio(columnas1);        
+            }    
+            catch (const char* msg){
+            cout << msg << endl;
+            break;
+            }
+
+            try{ 
+                if (datoVerificado == "int"){
+                    matrizInt1 = Matriz<int>(filas1, columnas1, datoVerificado);    
+                }    
+
+                else if  (datoVerificado == "float"){
+                    matrizFloat1 = Matriz<float>(filas1, columnas1, datoVerificado);    
+                }    
+
+                else if  (datoVerificado ==  "std::complex"){
+                   matrizComplex1 = Matriz<std::complex<float>>(filas1, columnas1, datoVerificado);    
+                }  
+            }           
+            catch (const std::invalid_argument& e){
+            std::cerr << "Error: " << e.what() << '\n';
+            break;
+            }
+
+            cout << "\n Por favor ingrese la cantidad de filas de la matriz 2: ";
+            cin >> filas2;
+
+            try{ 
+                    verificador.validarTamanio(filas2);        
+            }       
+            catch (const char* msg){
+            cout << msg << endl;
+            break;
+            }
+
+            cout << "\n Por favor ingrese la cantidad de columnas de la matriz 2: ";
+            cin >> columnas2;
+
+            try{ 
+                    verificador.validarTamanio(columnas2);        
+            }  
+            catch (const char* msg){
+            cout << msg << endl;
+            break;
+            }
+
+            try{ 
+                if (datoVerificado == "int"){
+                    matrizInt2 = Matriz<int>(filas2, columnas2, datoVerificado);    
+                }    
+
+                else if  (datoVerificado == "float"){
+                    matrizFloat2 = Matriz<float>(filas2, columnas2, datoVerificado);    
+                }    
+
+                else if  (datoVerificado ==  "std::complex"){
+                    matrizComplex2 = Matriz<std::complex<float>>(filas2, columnas2, datoVerificado);    
+                }  
+            }   
+             catch (const std::invalid_argument& e){
+                std::cerr << "Error: " << e.what() << '\n';
+                break;
+            }
+
+            break;
+
         
         case DATOS:
 
