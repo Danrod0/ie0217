@@ -1,11 +1,24 @@
+/**
+ * @file  main.cpp
+ * @brief Es la estructura principal del programa
+ * presenta el menu y pone al usuario a seleccionar
+ * lo que desea a hacer, llama a las funciones 
+ * destinadas para cada operacion
+ *
+ * @author Daniel Rodriguez Rivas B96719
+ * @date 08/05/2024
+ * 
+ * Licencia: MIT
+ */
+
 #include <iostream>
 #include "clases.hpp"
 #include "funciones.hpp"
 
 using namespace std;
 
+// Definicion de enumeracion para las opciones del menu
 enum opciones  { 
-
     GENERAR_MATRIZ = 1,
     DATOS,
     SELECCION_OPERACION,
@@ -13,9 +26,9 @@ enum opciones  {
     IMPRIMIR_MATRICES,
     REALIZAR_OPERACION,
     SALIR
-
 }; 
 
+// Declaracion de matrices y operadores para distintos tipos de datos
 Matriz<int> matrizInt1;
 Matriz<float> matrizFloat1;
 Matriz<std::complex<float>> matrizComplex1;
@@ -27,7 +40,7 @@ OperacionesBasicas<float> operadorFloat;
 OperacionesBasicas<std::complex<float>> operadorComplex;
 
 int main(){ 
-
+    // Instancia de la clase ValidarEntrada para verificar los datos ingresados por el usuario
     ValidarEntrada verificador;
 
     int opcion;
@@ -41,8 +54,9 @@ int main(){
     int columnas2;
     std::string operadorVerificado = "+";
 
+    // Bucle principal del programa
     do{ 
-
+        // Menu de opciones
         cout << "Bienvenido a la calculadora de matrices!!" << endl << endl;
         cout << "Por favor seleccione una opcion de nuestro menu" << endl;
         cout << "1. Generar matrices manualmente (seleccionar dimensiones e ingresar valores)" << endl;
@@ -55,10 +69,12 @@ int main(){
         cout << "Ingrese su opcion: " << endl;
         cin >> opcion;
 
+        // Switch para manejar las distintas opciones del menu
         switch (opcion) {
 
         case GENERAR_MATRIZ:
-
+            // Ingresar las dimensiones y valores para las matrices 1 y 2
+            // Manejo de excepciones para validar las entradas
             cout << "\n Por favor ingrese la cantidad de filas de la matriz 1: ";
             cin >> filas1;
 
@@ -142,7 +158,8 @@ int main(){
             break;
         
         case DATOS:
-
+            // Seleccionar el tipo de dato para las matrices
+            // Manejo de excepciones para validar la seleccion
             cout << "\n Tipos de datos compatibles con el programa: \nenteros, flotantes y complejos\n" << endl;
             cout << "Seleccione el tipo de dato deseado (ingrese una de las opciones anteriormente nombradas): ";
             cin >> tipoDato;
@@ -159,7 +176,8 @@ int main(){
             break;
 
         case SELECCION_OPERACION: 
-
+            // Seleccionar la operacion a realizar
+            // Manejo de excepciones para validar la seleccion
             try{
                 operadorVerificado = seleccionarOperacion();
             }
@@ -172,7 +190,8 @@ int main(){
             break;
         
         case DATOS_ALEATORIOS:
-
+            // Llenar las matrices con datos aleatorios
+            // Manejo de excepciones para verificar el tipo de dato
             cout << "Se llenaran las matrices con datos aleatorios \n" << endl;
             if (datoVerificado == "int"){
                     matrizInt1.llenarMatrizRandom();    
@@ -192,7 +211,8 @@ int main(){
             break;
 
         case IMPRIMIR_MATRICES:
-
+            // Imprimir las matrices ingresadas
+            // Verificar el tipo de dato y llamar a la funcion correspondiente de cada matriz
             cout << "Se imprimiran las matrices guardadas en el sistema " << endl;
 
             if (datoVerificado == "int"){ 
@@ -222,7 +242,9 @@ int main(){
             break;
 
         case REALIZAR_OPERACION:
-
+            // Realizar la operacion seleccionada entre las matrices
+            // Verificar la operacion y el tipo de dato, luego llamar a la funcion correspondiente del operador basico
+            // Manejo de excepciones para validar las operaciones
             cout << "Se realizara la operacion seleccionada \n" << endl;
 
             if (operadorVerificado == "+"){  
@@ -322,11 +344,12 @@ int main(){
             break;
 
         case SALIR:
+            // Salir del programa
              cout << "Saliendo del programa... Muchas gracias por elegirnos \n" << endl;
             break;
 
         default:
-
+            // Opcion invalida
             break;
         }
     }while(opcion != SALIR);
