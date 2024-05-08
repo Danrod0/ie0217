@@ -1,4 +1,6 @@
 #include <iostream>
+#include "clases.hpp"
+#include "funciones.hpp"
 
 using namespace std;
 
@@ -57,7 +59,7 @@ int main(){
 
         case GENERAR_MATRIZ:
 
-                cout << "\n Por favor ingrese la cantidad de filas de la matriz 1: ";
+            cout << "\n Por favor ingrese la cantidad de filas de la matriz 1: ";
             cin >> filas1;
 
             try{ 
@@ -138,7 +140,6 @@ int main(){
             }
 
             break;
-
         
         case DATOS:
 
@@ -222,6 +223,102 @@ int main(){
 
         case REALIZAR_OPERACION:
 
+            cout << "Se realizara la operacion seleccionada \n" << endl;
+
+            if (operadorVerificado == "+"){  
+                if (datoVerificado == "int"){ 
+                    try{ 
+                        matrizInt1 + matrizInt2;
+                    }
+                   catch(const std::invalid_argument& e) {
+                        std::cerr << "Error: " << e.what() << '\n';
+                        break;
+                    }                    
+                } 
+                               
+                else if (datoVerificado == "float"){ 
+                    try{
+                        matrizFloat1 + matrizFloat2;
+                    }
+                    catch(const std::invalid_argument& e) {
+                        std::cerr << "Error: " << e.what() << '\n';
+                        break;
+                    } 
+                } 
+
+                else if (datoVerificado == "std::complex"){ 
+                    try{
+                        matrizComplex1 + matrizComplex2;
+                    }
+                   catch(const std::invalid_argument& e) {
+                        std::cerr << "Error: " << e.what() << '\n';
+                        break;
+                    }
+                } 
+            }
+            
+            if (operadorVerificado == "-"){  
+                if (datoVerificado == "int"){ 
+                    try{
+                        matrizInt1 - matrizInt2;
+                    }
+                   catch(const std::invalid_argument& e) {
+                        std::cerr << "Error: " << e.what() << '\n';
+                        break;
+                    }
+                } 
+
+                else if (datoVerificado == "float"){ 
+                    try{
+                        matrizFloat1 - matrizFloat2;
+                    } 
+                    catch(const std::invalid_argument& e) {
+                        std::cerr << "Error: " << e.what() << '\n';
+                        break;
+                    }
+                } 
+
+                else if (datoVerificado == "std::complex"){ 
+                    try{
+                        matrizComplex1 - matrizComplex2;
+                    }
+                   catch(const std::invalid_argument& e) {
+                        std::cerr << "Error: " << e.what() << '\n';
+                        break;
+                    }
+                } 
+            }
+            
+            if (operadorVerificado == "*"){  
+                if (datoVerificado == "int"){ 
+                    try{
+                        matrizInt1 * matrizInt2;
+                    }
+                   catch(const std::invalid_argument& e) {
+                        std::cerr << "Error: " << e.what() << '\n';
+                        break;
+                    }
+                } 
+
+                else if (datoVerificado == "float"){ 
+                    try{
+                        matrizFloat1 * matrizFloat2;
+                    }
+                    catch(const std::invalid_argument& e) {
+                        std::cerr << "Error: " << e.what() << '\n';
+                        break;
+                    }
+                } 
+
+                else if (datoVerificado == "std::complex"){ 
+                    try{
+                        matrizComplex1 * matrizComplex2;
+                    } catch(const std::invalid_argument& e) {
+                        std::cerr << "Error: " << e.what() << '\n';
+                        break;
+                    }  
+                } 
+            }
             break;
 
         case SALIR:

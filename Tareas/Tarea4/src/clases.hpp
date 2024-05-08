@@ -19,6 +19,9 @@ void validarTamanio(int tamano);
 };
 
 template <typename T>
+class OperacionesBasicas;
+
+template <typename T>
 
 class Matriz { 
 
@@ -178,6 +181,120 @@ public:
             std::cout << std::endl;
         }
     }
+    
+    void operator+(Matriz<T>& segundaMatriz) {
+        operaciones.Suma(*this, segundaMatriz);
+    }
+
+    void operator-(Matriz<T>& segundaMatriz) {
+        operaciones.Resta(*this, segundaMatriz);
+    }
+
+    void operator*(Matriz<T>& segundaMatriz) {
+        operaciones.Multiplicacion(*this, segundaMatriz);
+    }
 };
+
+template <typename T>
+
+class OperacionesBasicas{ 
+
+    public:
+
+        OperacionesBasicas(){}
+
+        void validarSumaResta(Matriz<T>&matrizA, Matriz<T>&matrizB){ 
+
+            if (matrizA.filasMatriz != matrizB.filasMatriz || matrizA.columnasMatriz != matrizB.columnasMatriz){ 
+
+                throw std::invalid_argument("La operacion no puede ser realizadas, las matrices deben tener las mismas dimensiones");
+            } 
+        } 
+
+        void validarMultiplicacion(Matriz<T>&matrizA, Matriz<T>&matrizB){ 
+
+            if (matrizA.columnasMatriz != matrizB.filasMatriz){ 
+
+                throw std::invalid_argument("No se puede realizar la operacion, para realizarla, el numero de columnas de la matriz 1 debe ser igual al numero de filas de la matriz 2.");
+            } 
+        } 
+
+        void Suma(Matriz<T>& matrizA, Matriz<T>& matrizB) {
+
+            validarSumaResta(matrizA, matrizB);
+
+            Matriz<T> resultado;
+
+            resultado.filasMatriz = matrizA.filasMatriz;
+            resultado.columnasMatriz = matrizA.columnasMatriz;
+            resultado.tipo = matrizA.tipo;
+
+            for (size_t i = 0; i < matrizA.matrizResultado.size(); ++i) {
+                std::vector<T> filaResultado;
+
+                for (size_t j = 0; j < matrizA.matrizResultado[i].size(); ++j) {
+                    filaResultado.push_back(matrizA.matrizResultado[i][j] + matrizB.matrizResultado[i][j]);
+                }
+                resultado.matrizResultado.push_back(filaResultado);
+            }
+            resultado.imprimirMatriz();
+        }
+
+        void Resta(Matriz<T>& matrizA, Matriz<T>& matrizB) {
+
+            validarSumaResta(matrizA, matrizB);
+
+            Matriz<T> resultado;
+
+            resultado.filasMatriz = matrizA.filasMatriz;
+            resultado.columnasMatriz = matrizA.columnasMatriz;
+            resultado.tipo = matrizA.tipo;
+
+            for (size_t i = 0; i < matrizA.matrizResultado.size(); ++i) {
+
+                std::vector<T> filaResultado;
+
+                for (size_t j = 0; j < matrizA.matrizResultado[i].size(); ++j) {
+                    filaResultado.push_back(matrizA.matrizResultado[i][j] - matrizB.matrizResultado[i][j]);
+                }
+                resultado.matrizResultado.push_back(filaResultado);
+            }
+            resultado.imprimirMatriz();
+        }
+
+        void Multiplicacion(Matriz<T>& matriz1, Matriz<T>& matriz2) {
+            validarMultiplicacion(matriz1, matriz2);
+
+            Matriz<T> resultado;
+            resultado.filasMatriz = matriz1.filasMatriz;
+            resultado.columnasMatriz = matriz2.columnasMatriz;
+            resultado.tipo = matriz1.tipo;
+
+            for (size_t i = 0; i < matriz1.filasMatriz; ++i) {
+                std::vector<T> filaResultado;
+
+                for (size_t j = 0; j < matriz2.columnasMatriz; ++j) {
+                    T elemento = 0;
+
+                    for (size_t k = 0; k < matriz1.columnasMatriz; ++k) {
+                        if constexpr (std::is_same_v<T, std::complex<float>>) {
+                            // Multiplicación de números complejos
+                            std::complex<float> a = matriz1.matrizResultado[i][k];
+                            std::complex<float> b = matriz2.matrizResultado[k][j];
+                            elemento += (a.real() * b.real() - a.imag() * b.imag()) + 
+                                        (a.real() * b.imag() + a.imag() * b.real()) * std::complex<float>(0, 1);
+                        } else {
+                            // Multiplicación para otros tipos de datos
+                            elemento += matriz1.matrizResultado[i][k] * matriz2.matrizResultado[k][j];
+                        }
+                    }
+                    filaResultado.push_back(elemento);
+                }
+                resultado.matrizResultado.push_back(filaResultado);
+            }
+            resultado.imprimirMatriz();
+        }
+}; 
+
 
 #endif // CLASES_HPP
