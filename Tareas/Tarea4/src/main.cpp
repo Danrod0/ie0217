@@ -20,18 +20,24 @@ Matriz<std::complex<float>> matrizComplex1;
 Matriz<int> matrizInt2;
 Matriz<float> matrizFloat2;
 Matriz<std::complex<float>> matrizComplex2;
+OperacionesBasicas<int> operadorInt;
+OperacionesBasicas<float> operadorFloat;
+OperacionesBasicas<std::complex<float>> operadorComplex;
 
 int main(){ 
 
     ValidarEntrada verificador;
 
     int opcion;
+
+    
     std::string tipoDato;
     std::string datoVerificado = "int";
     int filas1;
     int columnas1;
     int filas2;
     int columnas2;
+    std::string operadorVerificado = "+";
 
     do{ 
 
@@ -152,6 +158,15 @@ int main(){
             break;
 
         case SELECCION_OPERACION: 
+
+            try{
+                operadorVerificado = seleccionarOperacion();
+            }
+            catch(const std::invalid_argument& e) {
+                std::cerr << "Error: " << e.what() << '\n';
+                cout << endl;
+                break;
+            }
             
             break;
         
