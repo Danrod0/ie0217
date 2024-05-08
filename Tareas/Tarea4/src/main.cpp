@@ -136,6 +136,19 @@ int main(){
         
         case DATOS:
 
+            cout << "\n Tipos de datos compatibles con el programa: \nenteros, flotantes y complejos\n" << endl;
+            cout << "Seleccione el tipo de dato deseado (ingrese una de las opciones anteriormente nombradas): ";
+            cin >> tipoDato;
+
+            try{ 
+                datoVerificado = verificador.validarDatos(tipoDato);
+            }
+
+            catch(const std::invalid_argument& e) {
+                std::cerr << "Error: " << e.what() << '\n';
+                break;
+            }
+            cout << datoVerificado << endl;
             break;
 
         case SELECCION_OPERACION: 
