@@ -2,7 +2,7 @@ CXX = g++ # El compilador de C++ a utilizar
 CXXFLAGS = -Wall -std=c++11 # Opciones de compilacion para el compilador de C++
 LDFLAGS = -lstdc++fs # Opciones de enlace para el enlazador
 
-SRC_DIR = src # Directorio que contiene los archivos fuente .cpp
+SRC_DIR = src # Directorio que contiene los archivos fuente .cpp y .hpp
 BIN_DIR = bin # Directorio donde se colocaran los archivos binarios ejecutables
 
 SOURCES = $(wildcard $(SRC_DIR)/*.cpp) # Lista de archivos fuente .cpp en el directorio de origen
