@@ -1,8 +1,11 @@
+#include "MainFrame.hpp"
+#include <wx/wx.h>
+
 // Definición de la tabla de eventos para MainFrame
 wxBEGIN_EVENT_TABLE(MainFrame, wxFrame)
-EVT_BUTTON(BUTTON_ID, MainFrame::OnButtonClicked)
-EVT_SLIDER(SLIDER_ID, MainFrame::OnSliderChanged)
-EVT_TEXT(TEXT_ID, MainFrame::OnTextChanged)
+    EVT_BUTTON(BUTTON_ID, MainFrame::OnButtonClicked)
+    EVT_SLIDER(SLIDER_ID, MainFrame::OnSliderChanged)
+    EVT_TEXT(TEXT_ID, MainFrame::OnTextChanged)
 wxEND_EVENT_TABLE()
 
 // Implementación del constructor de MainFrame
