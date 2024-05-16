@@ -56,3 +56,26 @@ void ValidadorEmail::validacionNombre(const std::string& mail) {
         throw std::invalid_argument("El nombre introducido es invalido.");
     }
 }
+
+void ValidadorEmail::validacionDominio(const std::string& mail) {
+    
+    std::string dominio = getDominio(mail);
+    std::regex charDominio("^([a-zA-Z]+\\.[a-zA-Z]+)(\\.[a-zA-Z]+)*$");
+    
+    size_t cantidadCharDominio = std::count_if(dominio.begin(), dominio.end(), [](char c) {
+        return std::isalnum(c) && c != '.';
+    });
+
+    if (cantidadCharDominio > 30 || cantidadCharDominio < 3) {
+        throw std::invalid_argument("El dominio no puede contener mas de 30 caracteres ni menos de 3.");
+    }
+    if (dominio.front() == '.' || dominio.back() == '.') {
+        throw std::invalid_argument("El dominio no puede iniciar ni terminar con un punto.");
+    }
+    if (dominio.find("..") != std::string::npos) {
+        throw std::invalid_argument("El dominio no puede contener segmentos consecutivos separados por un unico punto. (Ej: hola..mundo)");
+    }
+    if (!std::regex_match(dominio, charDominio)) {
+        throw std::invalid_argument("El dominio introducido es invalido.");
+    }
+}

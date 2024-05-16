@@ -8,8 +8,9 @@
 class ValidadorEmail { 
     public:
         void validacionNombre(const std::string& mail);
+        void validacionDominio(const std::string& mail);
 
-        
+
     private:
         std::string getNombre(const std::string& mail);
         std::string getExtension(const std::string& mail);
