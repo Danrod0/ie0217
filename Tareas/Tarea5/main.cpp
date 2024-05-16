@@ -1,3 +1,5 @@
+#include "Email.hpp"
+
 #include <iostream>
 
 using namespace std;
@@ -11,6 +13,10 @@ int main(){
 
     int opcion;
 
+    ValidadorEmail validadorDeCorreos;
+    
+    string correo;
+
     cout << "Bienvenido a nuestro validador de correos" << endl;
 
     do{ 
@@ -22,6 +28,9 @@ int main(){
         switch (opcion)
         {
         case CORREO:
+            cout << "Por favor, coloque el correo electronico: " << endl;
+            cin >> correo;
+            cout << "Correo ingresado correctamente" << endl;
             break;
       
         case SALIR:
