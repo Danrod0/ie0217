@@ -79,3 +79,17 @@ void ValidadorEmail::validacionDominio(const std::string& mail) {
         throw std::invalid_argument("El dominio introducido es invalido.");
     }
 }
+
+void ValidadorEmail::validacionExtension(const std::string& mail) {
+    
+    std::string extension = getExtension(mail); 
+
+    std::regex charExtension("^([a-zA-Z]{2,6}|\\.[a-zA-Z]{2,6})(\\.[a-zA-Z]{2,6}){0,2}$");
+    
+    if (extension.length() > 6 || extension.length() < 2) {
+        throw std::invalid_argument("La extension no puede contener mas de 6 letras ni menos de dos.");
+    }
+    if (!std::regex_match(extension, charExtension)) {
+        throw std::invalid_argument("La extension introducida es invalida (solo puede contener letras, no numeros ni caracteres especiales).");
+    }
+}
