@@ -33,6 +33,7 @@ int main(){
             validadorDeCorreos.validacionNombre(correo);
             validadorDeCorreos.validacionDominio(correo);
             validadorDeCorreos.validacionExtension(correo);
+            validadorDeCorreos.validarArroba(correo);
             cout << "El correo electronico cuenta con un formato correcto" << endl;
       
         case SALIR:

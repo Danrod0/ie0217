@@ -10,6 +10,7 @@ class ValidadorEmail {
         void validacionNombre(const std::string& mail);
         void validacionDominio(const std::string& mail);
         void validacionExtension(const std::string& mail); 
+        void validarArroba(const std::string& mail);
 
 
     private:

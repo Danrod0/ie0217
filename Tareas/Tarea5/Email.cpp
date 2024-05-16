@@ -93,3 +93,12 @@ void ValidadorEmail::validacionExtension(const std::string& mail) {
         throw std::invalid_argument("La extension introducida es invalida (solo puede contener letras, no numeros ni caracteres especiales).");
     }
 }
+
+void ValidadorEmail::validarArroba(const std::string& mail) {
+
+    size_t arroba = mail.find('@');
+
+    if (arroba == std::string::npos){ 
+        throw std::invalid_argument("El correo debe contener una arroba.");
+    }  
+}
