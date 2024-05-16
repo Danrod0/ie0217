@@ -102,3 +102,19 @@ void ValidadorEmail::validarArroba(const std::string& mail) {
         throw std::invalid_argument("El correo debe contener una arroba.");
     }  
 }
+
+bool ValidadorEmail::validarCorreo(const std::string& mail) {
+    try {
+        validarArroba(mail);
+        validacionNombre(mail);
+        validacionExtension(mail);
+        validacionDominio(mail);
+        
+        return true;
+    } 
+    catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+
+        return false;
+    }
+}

@@ -11,6 +11,7 @@ class ValidadorEmail {
         void validacionDominio(const std::string& mail);
         void validacionExtension(const std::string& mail); 
         void validarArroba(const std::string& mail);
+        bool validarCorreo(const std::string& mail);
 
 
     private:

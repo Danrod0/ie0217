@@ -30,11 +30,13 @@ int main(){
         case CORREO:
             cout << "Por favor, coloque el correo electronico: " << endl;
             cin >> correo;
-            validadorDeCorreos.validacionNombre(correo);
-            validadorDeCorreos.validacionDominio(correo);
-            validadorDeCorreos.validacionExtension(correo);
-            validadorDeCorreos.validarArroba(correo);
-            cout << "El correo electronico cuenta con un formato correcto" << endl;
+            if (validadorDeCorreos.validarCorreo(correo) == true){ 
+                cout << "El correo electronico cuenta con un formato correcto" << endl;
+            }
+            else { 
+                 cout << "El correo electronico NO cuenta con un formato correcto" << endl;
+            }
+            break;
       
         case SALIR:
              cout << "Saliendo del programa... \n" << endl;
