@@ -35,9 +35,8 @@ Muchos a muchos: Se implementa utilizando una tabla intermedia que contiene clav
   
   
 
-# Parte Practica  
-**Pasos a Seguir**  
-1. Creación de la base de datos y tablas:  
+# Parte Practica: **Pasos a Seguir**  
+## 1. Creación de la base de datos y tablas:  
 Primero se crea la base de datos con el siguiente comando:  
 ```
 CREATE DATABASE IF NOT EXISTS plan_estudios_db;
@@ -102,3 +101,42 @@ Donde se obtuvo la siguiente salida en la consola:
 
 Y se puede ver la confirmación de la creación de la tabla a la hora de abrir la misma como se puede ver en la siguiente imagen:  
 ![Tabla Descripciones vacia recien creada](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/CreacionTablaDescripciones2.png)  
+
+## 2. Inserción de datos:
+
+### Inserte la informacion basica de los cursos y sus requisitos segun el plan de estudios proporcionado.
+
+Primero para esta parte se ingresaron los datos a la tabla de cursos, de los cursos del plan de estudios proporcionado:  
+```
+INSERT INTO Cursos (CursoID, Sigla, Nombre, Semestre, Creditos) VALUES
+(01, 'IE-0579', 'Administración de sistemas', 9, 4),
+(02, 'IE-0613', 'Electrónica industrial', 9, 4),
+(03, 'IE-0599', 'Anteproyecto de TFG', 9, 4),
+(04, 'IE-1', 'Optativa I', 9, 3),
+(05, 'IE-2', 'Optativa II', 9, 3),
+(06, 'IE-0679', 'Ciencia de datos para la est. y pron. de eventos', 10, 3),
+(07, 'IE-0541', 'Seguridad ocupacional', 10, 3),
+(08, 'IE-3', 'Optativa III', 10, 3),
+(09, 'IE-4', 'Optativa IV', 10, 3);
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de la primer subida de datos a la tabla cursos en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/ConfirmacionDatosTablaCursos.png)  
+  
+Ademas se puede observar en la siguiente imagen la tabla ya llena con los datos:  
+![Primera tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos1.png)  
+  
+Luego me di cuenta que hicieron falta cursos por lo que se subieron igual a la tabla de cursos:
+```
+INSERT INTO Cursos (CursoID, Sigla, Nombre, Semestre, Creditos) VALUES
+(10, 'IE-0479	', 'INGENIERÍA ECONÓMICA', 8, 3),
+(11, 'IE-0413', 'ELECTRÓNICA II', 5, 3),
+(12, 'IE-0315', 'MÁQUINAS ELÉCTRICAS I', 6, 3),
+(13, 'IE-0499', 'PROYECTO ELÉCTRICO', 10, 3),
+(14, 'IE-0405', 'MODELOS PROBABILÍSTICOS DE SEÑALES Y SISTEMAS', 6, 3),
+(15, 'IE-0501', 'RESPONSABILIDADES EN EL EJERCICIO PROFESIONAL DE LA INGENIERÍA ELÉCTRICA', 6, 1);
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de la segunda subida de datos a la tabla cursos en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/ConfirmacionDatosTablaCursos2.png)  
+  
+Ademas se puede observar en la siguiente imagen la tabla ya llena con los datos:  
+![Segunda tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos2.png)  
