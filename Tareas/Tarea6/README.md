@@ -66,3 +66,39 @@ Donde se obtuvo la siguiente salida en la consola:
 
 Y se puede ver la confirmación de la creación de la tabla a la hora de abrir la misma como se puede ver en la siguiente imagen:
 ![Tabla cursos vacia recien creada](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/CreacionTablaCursos2.png)  
+
+  
+Seguidamente se definió y se creó la tabla de requisitos utilizando la siguiente parte del código:  
+```
+CREATE TABLE IF NOT EXISTS Requisitos (
+    RequisitoID INT AUTO_INCREMENT,
+    CursoID INT NOT NULL,
+    RequisitoCursoID INT NOT NULL,
+    PRIMARY KEY (RequisitoID),
+    FOREIGN KEY (CursoID) REFERENCES Cursos(CursoID),
+    FOREIGN KEY (RequisitoCursoID) REFERENCES Cursos(CursoID)
+);
+``` 
+Donde se obtuvo la siguiente salida en la consola:  
+![Confirmacion de la creacion de la tabla Requisito en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/CreacionTablaRequisitos.png)  
+
+Y se puede ver la confirmación de la creación de la tabla a la hora de abrir la misma como se puede ver en la siguiente imagen:  
+![Tabla Requisito vacia recien creada](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/CreacionTablaRequisitos2.png)  
+  
+
+Por ultimo se definió y se creó la tabla de descripciones utilizando la siguiente parte del código:  
+```
+CREATE TABLE IF NOT EXISTS Descripciones (
+    DescripcionID INT AUTO_INCREMENT,
+    CursoID INT NOT NULL,
+    Descripcion TEXT NOT NULL,
+    Dificultad ENUM('Facil', 'Media', 'Dificil') NOT NULL,
+    PRIMARY KEY (DescripcionID),
+    FOREIGN KEY (CursoID) REFERENCES Cursos(CursoID)
+);
+``` 
+Donde se obtuvo la siguiente salida en la consola:  
+![Confirmacion de la creacion de la tabla Descripciones en la consola]()  
+
+Y se puede ver la confirmación de la creación de la tabla a la hora de abrir la misma como se puede ver en la siguiente imagen:  
+![Tabla Descripciones vacia recien creada]()  
