@@ -226,4 +226,48 @@ Donde se puede observar que esto fue realizado con exito gracias al siguiente me
 
 Obteniendose la siguiente tabla como resultado de la consulta:  
 ![Tabla obtenida con la consulta 1](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Consulta1Tabla.png)  
+  
+### Realiza consultas para listar todos los requisitos de un curso especifico.
+Para esto se utilizo el siguiente codigo:  
+```
+-- Consulta requisitos curso especifico
+SELECT r.RequisitoID, c1.Sigla AS Curso, c2.Sigla AS Requisito
+FROM Requisitos r
+JOIN Cursos c1 ON r.CursoID = c1.CursoID
+JOIN Cursos c2 ON r.RequisitoCursoID = c2.CursoID
+WHERE c1.Sigla = 'IE-0613';
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la consulta 2 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Consulta2Confirmacion.png)  
 
+Obteniendose la siguiente tabla como resultado de la consulta:  
+![Tabla obtenida con la consulta 2](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Consulta2Tabla.png)  
+  
+### Realizar consulta para listar los cursos que no son optativos.
+Para esto se utilizo el siguiente codigo:  
+```
+-- Consulta para listar los cursos que no son optativos
+SELECT Sigla, Nombre, Semestre, Creditos
+FROM Cursos
+WHERE Nombre NOT LIKE 'Optativa%';
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la consulta 3 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Consulta3Confirmacion.png)  
+
+Obteniendose la siguiente tabla como resultado de la consulta:  
+![Tabla obtenida con la consulta 3](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Consulta3Tabla.png)  
+  
+### Listar los cursos que pertenecen al semestre X
+Para esto se utilizo el siguiente codigo:  
+```
+-- Consulta para listar los cursos del semestre 10
+SELECT Sigla, Nombre, Semestre, Creditos
+FROM Cursos
+WHERE Semestre = 10;
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la consulta 4 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Consulta4Confirmacion.png)  
+
+Obteniendose la siguiente tabla como resultado de la consulta:  
+![Tabla obtenida con la consulta 4](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Consulta4Tabla.png)  
+  
