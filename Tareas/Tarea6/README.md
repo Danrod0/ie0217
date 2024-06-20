@@ -43,7 +43,7 @@ Primero se crea la base de datos con el siguiente comando:
 CREATE DATABASE IF NOT EXISTS plan_estudios_db;
 ```
 Donde al correr el comando se obtuvo la siguiente respuesta en la consola:
-![Base de datos creada](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Basededatoscreada.png)  
+![Base de datos creada](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Basededatoscreada.png)  
 
 Luego se definió y se creó la tabla de cursos utilizando la siguiente parte del código:  
 
@@ -62,10 +62,10 @@ CREATE TABLE Cursos (
 );
 ```
 Donde se obtuvo la siguiente salida en la consola:
-![Confirmacion de la creacion de la tabla Cursos en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/CreacionTablaCursos.png)  
+![Confirmacion de la creacion de la tabla Cursos en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/CreacionTablaCursos.png)  
 
 Y se puede ver la confirmación de la creación de la tabla a la hora de abrir la misma como se puede ver en la siguiente imagen:
-![Tabla cursos vacia recien creada](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/CreacionTablaCursos2.png)  
+![Tabla cursos vacia recien creada](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/CreacionTablaCursos2.png)  
 
   
 Seguidamente se definió y se creó la tabla de requisitos utilizando la siguiente parte del código:  
@@ -80,10 +80,10 @@ CREATE TABLE IF NOT EXISTS Requisitos (
 );
 ``` 
 Donde se obtuvo la siguiente salida en la consola:  
-![Confirmacion de la creacion de la tabla Requisito en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/CreacionTablaRequisitos.png)  
+![Confirmacion de la creacion de la tabla Requisito en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/CreacionTablaRequisitos.png)  
 
 Y se puede ver la confirmación de la creación de la tabla a la hora de abrir la misma como se puede ver en la siguiente imagen:  
-![Tabla Requisito vacia recien creada](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/CreacionTablaRequisitos2.png)  
+![Tabla Requisito vacia recien creada](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/CreacionTablaRequisitos2.png)  
   
 
 Por ultimo se definió y se creó la tabla de descripciones utilizando la siguiente parte del código:  
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS Descripciones (
 );
 ``` 
 Donde se obtuvo la siguiente salida en la consola:  
-![Confirmacion de la creacion de la tabla Descripciones en la consola]()  
+![Confirmacion de la creacion de la tabla Descripciones en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/CreacionTablaDescripciones.png)  
 
 Y se puede ver la confirmación de la creación de la tabla a la hora de abrir la misma como se puede ver en la siguiente imagen:  
-![Tabla Descripciones vacia recien creada]()  
+![Tabla Descripciones vacia recien creada](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/CreacionTablaDescripciones2.png)  
