@@ -207,10 +207,10 @@ Ademas se puede observar en la siguiente imagen la tabla de cursos ya llena con 
 ![Tercera tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos3.png)  
   
 Seguidamente se puede observar en la siguiente imagen la tabla de descripciones ya llena con los datos de los nuevos cursos:  
-![Tercera tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones2.png)  
+![Segunda tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones2.png)  
   
 Ademas se puede observar en la siguiente imagen la tabla de requisitos ya llena con los datos de los nuevos cursos:  
-![Tercera tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos2.png)  
+![Segunda tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos2.png)  
 
 ## 3. Consultas:  
 ### Realiza consultas para listar todos los cursos con su sigla, nombre, semestre, creditos, descripcion y dificultad.  
@@ -271,3 +271,102 @@ Donde se puede observar que esto fue realizado con exito gracias al siguiente me
 Obteniendose la siguiente tabla como resultado de la consulta:  
 ![Tabla obtenida con la consulta 4](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Consulta4Tabla.png)  
   
+## 4. Actualizaciones:
+### Actualiza el nombre y creditos de 3 de los cursos optativos (puedes agregar cursos del plan de estudios de bachillerato para tomarlo como optativa).
+Primero se actualizo la optativa 1, para esto se utilizo el siguiente codigo:  
+```
+-- Actualizacion Optativa 1
+UPDATE Cursos
+SET Nombre = 'Programación bajo plataformas abiertas', Creditos = 4
+WHERE Sigla = 'IE-1';
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la actualizacion 1 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Actualizacion1Confirmacion.png)  
+
+La siguiente tabla es la tabla de cursos antes de la actualizacion:  
+![Tercera tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos3.png)  
+
+Obteniendose la siguiente tabla como resultado de la actualizacion de la optativa 1:  
+![Cuarta tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos4.png)  
+
+Seguidamente se actualizo la optativa 2, para esto se utilizo el siguiente codigo:  
+```
+-- Actualizacion Optativa 2
+UPDATE Cursos
+SET Nombre = 'Estructuras abstractas de datos y algoritmos para ingeniería', Creditos = 4
+WHERE Sigla = 'IE-2';
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la actualizacion 2 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Actualizacion2Confirmacion.png)  
+
+La siguiente tabla es la tabla de cursos antes de la actualizacion:  
+![Cuarta tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos4.png)  
+
+Obteniendose la siguiente tabla como resultado de la actualizacion de la optativa 2:  
+![Quinta tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos5.png)  
+
+Seguidamente se actualizo la optativa 3, para esto se utilizo el siguiente codigo:  
+```
+-- Actualizacion Optativa 3
+UPDATE Cursos
+SET Nombre = 'Inteligencia artificial aplicada a la ingeniería eléctrica', Creditos = 4
+WHERE Sigla = 'IE-3';
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la actualizacion 3 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Actualizacion3Confirmacion.png)  
+
+La siguiente tabla es la tabla de cursos antes de la actualizacion:  
+![Quinta tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos5.png)  
+
+Obteniendose la siguiente tabla como resultado de la actualizacion de la optativa 3:  
+![Sexta tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos6.png)  
+
+### Actualiza la descripcion y dificultad de 3 cursos existentes a tu eleccion.  
+Primero se actualizo la descripcion y dificultad de la optativa 1, para esto se utilizo el siguiente codigo:  
+```
+-- Actualizacion descripcion curso Optativa 1
+UPDATE Descripciones
+SET Descripcion = 'Curso donde se aprende a programar en Python y lo basico en C', Dificultad = 'Dificil'
+WHERE CursoID = 04;
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la actualizacion 4 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Actualizacion4Confirmacion.png)  
+
+La siguiente tabla es la tabla de descripciones antes de la actualizacion:  
+![Segunda tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones2.png)  
+
+Obteniendose la siguiente tabla como resultado de la actualizacion de la optativa 1:  
+![Tercera tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones3.png)   
+
+Seguidamente se actualizo la descripcion y dificultad de la optativa 2, para esto se utilizo el siguiente codigo:  
+```
+-- Actualizacion descripcion curso Optativa 2
+UPDATE Descripciones
+SET Descripcion = 'Curso donde se aprende a programar en C++ y lo basico de SQL', Dificultad = 'Dificil'
+WHERE CursoID = 05;
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la actualizacion 5 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Actualizacion5Confirmacion.png)  
+
+La siguiente tabla es la tabla de descripciones antes de la actualizacion:  
+![Tercera tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones3.png)   
+
+Obteniendose la siguiente tabla como resultado de la actualizacion de la optativa 2:  
+![Cuarta tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones4.png)   
+
+Luego se actualizo la descripcion y dificultad de la optativa 3, para esto se utilizo el siguiente codigo:  
+```
+-- Actualizacion descripcion curso Optativa 3
+UPDATE Descripciones
+SET Descripcion = 'Curso donde se aprende como se puede aplicar la IA en Ing. Electrica.', Dificultad = 'Dificil'
+WHERE CursoID = 08;
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la actualizacion 6 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Actualizacion6Confirmacion.png)  
+
+La siguiente tabla es la tabla de descripciones antes de la actualizacion:  
+![Cuarta tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones4.png)   
+
+Obteniendose la siguiente tabla como resultado de la actualizacion de la optativa 3:  
+![Quinta tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones5.png)   
+
