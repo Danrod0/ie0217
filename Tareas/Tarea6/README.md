@@ -1,3 +1,10 @@
+Daniel Rodriguez Rivas B96719  
+
+# Instrucciones de compilacio/ejecucion
+
+Se recomienda que si se quiere ejecutar el codigo presente en el readmi, se vaya ejecutando por partes, siguiente el flujo de la seccion de pasos a seguir.
+
+
 # Parte teorica
 **Respuestas**
   
