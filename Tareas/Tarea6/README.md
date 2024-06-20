@@ -178,9 +178,9 @@ INSERT INTO Requisitos (RequisitoID, CursoID, RequisitoCursoID) VALUES
 (07, 07, 15);
 ```  
 Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
-![Confirmacion de la primera subida de datos a la tabla requisitos en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/ConfirmacionDatosTablaDescripciones.png)  
+![Confirmacion de la primera subida de datos a la tabla requisitos en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/ConfirmacionDatosTablaRequisitos.png)  
   
 Ademas se puede observar en la siguiente imagen la tabla ya llena con los datos:  
-![Segunda tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones.png)  
+![Segunda tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos.png)  
 
 
