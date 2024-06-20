@@ -212,3 +212,18 @@ Seguidamente se puede observar en la siguiente imagen la tabla de descripciones 
 Ademas se puede observar en la siguiente imagen la tabla de requisitos ya llena con los datos de los nuevos cursos:  
 ![Tercera tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos2.png)  
 
+## 3. Consultas:  
+### Realiza consultas para listar todos los cursos con su sigla, nombre, semestre, creditos, descripcion y dificultad.  
+Para esto se utilizo el siguiente codigo:  
+```
+-- Consultas para listar todos los cursos
+SELECT c.Sigla, c.Nombre, c.Semestre, c.Creditos, d.Descripcion, d.Dificultad
+FROM Cursos c
+JOIN Descripciones d ON c.CursoID = d.CursoID;
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la consulta 1 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Consulta1Confirmacion.png)  
+
+Obteniendose la siguiente tabla como resultado de la consulta:  
+![Tabla obtenida con la consulta 1](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Consulta1Tabla.png)  
+
