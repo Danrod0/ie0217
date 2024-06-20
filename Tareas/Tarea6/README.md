@@ -184,3 +184,31 @@ Ademas se puede observar en la siguiente imagen la tabla ya llena con los datos:
 ![Segunda tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos.png)  
 
 
+### Agrege dos cursos nuevos y complete la informacion requerida  (Ademas se inserta la relacion de requisitos)
+
+Primero se anadieron estos cursos a la tabla de cursos, seguidamente a la tabla de descripciones y por ultimo a la de requisitos, donde se anade la relacion de requisitos necesaria, como se muestra en el codigo:
+```
+-- Se anaden los dos cursos nuevecitos
+INSERT INTO Cursos (CursoID, Sigla, Nombre, Semestre, Creditos) VALUES
+(16, 'IE-0901', 'Introduccion a las redes neuronales', 5, 3),
+(17, 'IE-0902', 'Introduccion a la computacion evolutiva', 6, 4);
+
+INSERT INTO Descripciones (DescripcionID, CursoID, Descripcion, Dificultad) VALUES
+(16, 16, 'Curso donde se introduce la teoria sobre las redes neuronales para IA', 'Media'),
+(17, 17, 'Curso donde se introduce la teoria sobre la computacion evolutiva para IA', 'Dificil');
+
+INSERT INTO Requisitos (RequisitoID, CursoID, RequisitoCursoID) VALUES
+(08, 17, 16);
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de la subida de datos de los 2 cursos a las tablas consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/ConfirmacionDatos2CursosNuevos.png)  
+  
+Ademas se puede observar en la siguiente imagen la tabla de cursos ya llena con los datos de los nuevos cursos:  
+![Tercera tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos3.png)  
+  
+Seguidamente se puede observar en la siguiente imagen la tabla de descripciones ya llena con los datos de los nuevos cursos:  
+![Tercera tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones2.png)  
+  
+Ademas se puede observar en la siguiente imagen la tabla de requisitos ya llena con los datos de los nuevos cursos:  
+![Tercera tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos2.png)  
+
