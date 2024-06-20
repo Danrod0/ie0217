@@ -140,3 +140,47 @@ Donde se puede observar que esto fue realizado con exito gracias al siguiente me
   
 Ademas se puede observar en la siguiente imagen la tabla ya llena con los datos:  
 ![Segunda tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos2.png)  
+  
+Seguidamente se procedió a llenar la tabla de descripciones, solo que esta vez se llenaron los 15 cursos al mismo tiempo, como se puede ver en el código:  
+```
+INSERT INTO Descripciones (DescripcionID, CursoID, Descripcion, Dificultad) VALUES
+(01, 01, 'Curso sobre administración de sistemas de información', 'Media'),
+(02, 02, 'Curso sobre electrónica aplicada a la industria.', 'Dificil'),
+(03, 03, 'Curso sobre la elaboración del anteproyecto del trabajo final de graduación.', 'Media'),
+(04, 04, 'Curso optativo que permite elegir entre diversas áreas de interés.', 'Facil'),
+(05, 05, 'Curso optativo que permite elegir entre diversas áreas de interés.', 'Facil'),
+(06, 06, 'Curso sobre ciencia de datos enfocado en la estimación y pronóstico de eventos.', 'Dificil'),
+(07, 07, 'Curso sobre seguridad y salud ocupacional en el entorno laboral.', 'Media'),
+(08, 08, 'Curso optativo que permite elegir entre diversas áreas de interés.', 'Facil'),
+(09, 09, 'Curso optativo que permite elegir entre diversas áreas de interés.', 'Facil'),
+(10, 10, 'Curso sobre los principios de la ingeniería económica y su aplicación en proyectos.', 'Media'),
+(11, 11, 'Curso avanzado sobre electrónica, incluyendo circuitos y dispositivos electrónicos.', 'Dificil'),
+(12, 12, 'Curso introductorio sobre las máquinas eléctricas y su funcionamiento.', 'Media'),
+(13, 13, 'Curso enfocado en la elaboración y gestión de proyectos eléctricos.', 'Dificil'),
+(14, 14, 'Curso sobre modelos probabilísticos aplicados a señales y sistemas.', 'Media'),
+(15, 15, 'Curso sobre las responsabilidades profesionales y éticas en la ingeniería eléctrica.', 'Facil');
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de la primera subida de datos a la tabla descripciones en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/ConfirmacionDatosTablaDescripciones.png)  
+  
+Ademas se puede observar en la siguiente imagen la tabla ya llena con los datos:  
+![Segunda tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones.png)  
+
+Por ultimo se procedió a llenar la tabla de requisitos, como se puede ver en el código:  
+```
+INSERT INTO Requisitos (RequisitoID, CursoID, RequisitoCursoID) VALUES
+(01, 01, 10),
+(02, 02, 11),
+(03, 02, 12),
+(04, 03, 13),
+(05, 06, 14),
+(06, 06, 01),
+(07, 07, 15);
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de la primera subida de datos a la tabla requisitos en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/ConfirmacionDatosTablaDescripciones.png)  
+  
+Ademas se puede observar en la siguiente imagen la tabla ya llena con los datos:  
+![Segunda tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones.png)  
+
+
