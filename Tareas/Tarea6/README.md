@@ -32,3 +32,37 @@
 10. Uno a uno: Se implementa usando una clave primaria que también es clave foránea en otra tabla. Consideraciones para tener en cuenta: hay que asegurarse de que las tablas siempre tengan una correspondencia uno a uno.  
 Uno a muchos: Se implementa mediante una clave foránea en la tabla "muchos" que apunta a la clave primaria en la tabla "uno", esta es la relación más común. Consideraciones para tener en cuenta: Se debe garantizar la integridad referencial y las restricciones de claves foráneas.  
 Muchos a muchos: Se implementa utilizando una tabla intermedia que contiene claves foráneas las cuales apuntan a las claves primarias de las dos tablas relacionadas. Consideraciones para tener en cuenta: se debe asegurar que la tabla intermedia tenga restricciones adecuadas para mantener la integridad referencial.  
+  
+  
+
+# Parte Practica  
+**Pasos a Seguir**  
+1. Creación de la base de datos y tablas:  
+Primero se crea la base de datos con el siguiente comando:  
+```
+CREATE DATABASE IF NOT EXISTS plan_estudios_db;
+```
+Donde al correr el comando se obtuvo la siguiente respuesta en la consola:
+![Base de datos creada](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Basededatoscreada.png)  
+
+Luego se definió y se creó la tabla de cursos utilizando la siguiente parte del código:  
+
+```
+USE plan_estudios_db;
+
+CREATE TABLE Cursos (
+    CursoID INT AUTO_INCREMENT,
+    Sigla VARCHAR(10) NOT NULL,
+    Nombre VARCHAR(100) NOT NULL,
+    Semestre INT NOT NULL,
+    Creditos INT NOT NULL,
+    PRIMARY KEY (CursoID),
+    UNIQUE (Sigla),
+    UNIQUE (Nombre)
+);
+```
+Donde se obtuvo la siguiente salida en la consola:
+![Confirmacion de la creacion de la tabla Cursos en la consola](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/CreacionTablaCursos.png)  
+
+Y se puede ver la confirmación de la creación de la tabla a la hora de abrir la misma como se puede ver en la siguiente imagen:
+![Tabla cursos vacia recien creada](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/CreacionTablaCursos2.png)  
