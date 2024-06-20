@@ -370,3 +370,130 @@ La siguiente tabla es la tabla de descripciones antes de la actualizacion:
 Obteniendose la siguiente tabla como resultado de la actualizacion de la optativa 3:  
 ![Quinta tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones5.png)   
 
+## 5. Eliminaciones:  
+### Elimina un curso inventado y 2 cursos del plan y asegurate de que tambien se eliminen sus descripciones asociadas.
+Para realizar esto se utilizo el siguiente codigo, primero para un curso inventado:  
+```
+-- Elimina un curso inventado y 2 cursos del plan
+-- 1 Curso inventado
+DELETE FROM Descripciones
+WHERE CursoID = 16;
+DELETE FROM Requisitos
+WHERE CursoID = 16 OR RequisitoCursoID = 16;
+DELETE FROM Cursos
+WHERE CursoID = 16;
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la eliminacion 1 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Eliminacion1Confirmacion.png)  
+
+La siguiente tabla es la tabla de cursos antes de la eliminacion:  
+![Sexta tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos6.png)  
+
+La siguiente tabla es la tabla de descripciones antes de la eliminacion:  
+![Quinta tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones5.png)   
+
+La siguiente tabla es la tabla de requisitos antes de la eliminacion:  
+![Segunda tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones2.png)   
+
+Obteniendose la siguiente tabla de cursos como resultado de la eliminacion del curso inventado:  
+![7 tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos7.png)  
+
+Obteniendose la siguiente tabla de descripciones como resultado de la eliminacion del curso inventado:  
+![6 tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones6.png)   
+
+Obteniendose la siguiente tabla de requisitos como resultado de la eliminacion del curso inventado:  
+![3 tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos3.png)   
+
+Luego se utilizo el siguiente codigo, ahora para un primer curso del plan:  
+```
+-- 2
+DELETE FROM Descripciones
+WHERE CursoID = 07;
+DELETE FROM Requisitos
+WHERE CursoID = 07 OR RequisitoCursoID = 07;
+DELETE FROM Cursos
+WHERE CursoID = 07;
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la eliminacion 2 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Eliminacion2Confirmacion.png)  
+
+La siguiente tabla es la tabla de cursos antes de la eliminacion:  
+![7 tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos7.png)  
+
+La siguiente tabla es la tabla de descripciones antes de la eliminacion:  
+![6 tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones6.png)   
+
+La siguiente tabla es la tabla de requisitos antes de la eliminacion:  
+![3 tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones3.png)   
+
+Obteniendose la siguiente tabla de cursos como resultado de la eliminacion del curso 1 del plan:  
+![8 tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos8.png)  
+
+Obteniendose la siguiente tabla de descripciones como resultado de la eliminacion del curso 1 del plan:  
+![7 tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones7.png)   
+
+Obteniendose la siguiente tabla de requisitos como resultado de la eliminacion del curso 1 del plan:  
+![4 tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos4.png)   
+
+Por ultimo se utilizo el siguiente codigo, ahora para un segundo curso del plan:  
+```
+-- 3
+DELETE FROM Descripciones
+WHERE CursoID = 09;
+DELETE FROM Requisitos
+WHERE CursoID = 09 OR RequisitoCursoID = 09;
+DELETE FROM Cursos
+WHERE CursoID = 09;
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la eliminacion 3 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Eliminacion3Confirmacion.png)  
+
+La siguiente tabla es la tabla de cursos antes de la eliminacion:  
+![8 tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos8.png)  
+
+La siguiente tabla es la tabla de descripciones antes de la eliminacion:  
+![7 tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones7.png)   
+
+La siguiente tabla es la tabla de requisitos antes de la eliminacion:  
+![4 tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones4.png)   
+
+Obteniendose la siguiente tabla de cursos como resultado de la eliminacion del curso 2 del plan:  
+![9 tabla de cursos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaCursos9.png)  
+
+Obteniendose la siguiente tabla de descripciones como resultado de la eliminacion del curso 2 del plan:  
+![8 tabla de descripciones](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaDescripciones8.png)   
+
+Obteniendose la siguiente tabla de requisitos como resultado de la eliminacion del curso 2 del plan:  
+![5 tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos5.png)   
+
+### Elimina requisitos especificos de 2 cursos existentes.
+Primero se eliminaron los requisitos especificos del curso Administración de sistemas, para esto se utilizo el siguiente codigo:  
+```
+-- Eliminar requisitos específicos de 2 cursos existentes
+-- Eliminando requisitos del curso Administración de sistemas
+DELETE FROM Requisitos
+WHERE CursoID = 01 AND RequisitoCursoID = 10;
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la eliminacion 4 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Eliminacion4Confirmacion.png)   
+
+La siguiente tabla es la tabla de requisitos antes de la eliminacion:  
+![5 tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos5.png)   
+
+Obteniendose la siguiente tabla de requisitos como resultado de la eliminacion de los requisitos especificos del curso Administración de sistemas:  
+![6 tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos6.png)    
+
+Por ultimo se eliminaron los requisitos especificos del curso Anteproyecto de TFG, para esto se utilizo el siguiente codigo:  
+```
+-- Eliminando requisitos del curso Anteproyecto de TFG
+DELETE FROM Requisitos
+WHERE CursoID = 03 AND RequisitoCursoID = 13;
+```  
+Donde se puede observar que esto fue realizado con exito gracias al siguiente mensaje que fue impreso en consola:  
+![Confirmacion de que la eliminacion 5 fue realizada con exito](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/Eliminacion5Confirmacion.png)   
+
+La siguiente tabla es la tabla de requisitos antes de la eliminacion:  
+![6 tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos6.png)   
+
+Obteniendose la siguiente tabla de requisitos como resultado de la eliminacion de los requisitos especificos del curso Anteproyecto de TFG:  
+![7 tabla de requisitos](https://github.com/Danrod0/ie0217/blob/main/Tareas/Tarea6/Imagenes/TablaRequisitos7.png)    
